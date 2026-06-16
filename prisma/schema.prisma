@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum ServiceType {
+  ANTKAPIS
+  RESTAURAVIMAS
+  KAPAVIETES_IRENGIMAS
+  KITA
+}
+
+enum LeadStatus {
+  NAUJAS
+  SUSISIEKTA
+  PASIULYMAS
+  LAIMETA
+  PRARASTA
+}
+
+model Lead {
+  id          String      @id @default(uuid())
+  createdAt   DateTime    @default(now())
+  name        String
+  phone       String
+  email       String?
+  serviceType ServiceType
+  message     String
+  source      String      @default("/")
+  status      LeadStatus  @default(NAUJAS)
+  notes       String      @default("")
+}
+
+model User {
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+  name     String
+}
