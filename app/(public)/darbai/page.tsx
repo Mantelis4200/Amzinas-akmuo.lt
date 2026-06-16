@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Mūsų darbai — antkapiai ir kapaviečių įrengimas",
   description:
     "Peržiūrėkite mūsų įgyvendintus darbus: individualaus dizaino antkapiai, restauravimas, kapaviečių įrengimas visoje Lietuvoje.",
+  openGraph: {
+    title: "Mūsų darbai — antkapiai ir kapaviečių įrengimas | Amžinas Akmuo",
+    description:
+      "Peržiūrėkite mūsų įgyvendintus darbus: individualaus dizaino antkapiai, restauravimas, kapaviečių įrengimas visoje Lietuvoje.",
+    url: "https://amzinasakmuo.lt/darbai",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 export default function DarbaiPage() {

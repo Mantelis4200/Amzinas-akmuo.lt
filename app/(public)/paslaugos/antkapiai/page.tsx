@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   title: "Antkapiai — individualaus dizaino paminklai",
   description:
     "Gaminame individualaus dizaino antkapius iš granito ir marmuro tiesiai iš savo gamyklos. Modernios formos, graviravimas, garantija. Visa Lietuva.",
+  openGraph: {
+    title: "Antkapiai — individualaus dizaino paminklai | Amžinas Akmuo",
+    description:
+      "Gaminame individualaus dizaino antkapius iš granito ir marmuro tiesiai iš savo gamyklos. Modernios formos, graviravimas, garantija. Visa Lietuva.",
+    url: "https://amzinasakmuo.lt/paslaugos/antkapiai",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 // Stone notes shown in the guide

@@ -1,19 +1,30 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Gallery } from "@/components/Gallery";
 import { Process } from "@/components/Process";
 import { Testimonials } from "@/components/Testimonials";
 import { ServiceCard } from "@/components/ServiceCard";
 import { LeadForm } from "@/components/LeadForm";
+import { JsonLd } from "@/components/JsonLd";
 
-export const metadata = {
-  title: "Modernaus dizaino antkapiai | Amžinas Akmuo",
+export const metadata: Metadata = {
+  title: "Modernaus dizaino antkapiai — Amžinas Akmuo",
   description:
     "Gaminame modernaus dizaino antkapius tiesiai iš savo gamyklos — be perpardavėjų antkainio. Asmeninis vadovas, skaidri kaina, garantija.",
+  openGraph: {
+    title: "Modernaus dizaino antkapiai — Amžinas Akmuo",
+    description:
+      "Gaminame modernaus dizaino antkapius tiesiai iš savo gamyklos — be perpardavėjų antkainio. Asmeninis vadovas, skaidri kaina, garantija.",
+    url: "https://amzinasakmuo.lt",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd />
       <style>{`
         /* HERO */
         .hero { position: relative; overflow: hidden; }

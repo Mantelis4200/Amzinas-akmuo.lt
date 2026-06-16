@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Paminklų restauravimas — atnaujinamas atminimas",
   description:
     "Restauruojame paminklus visoje Lietuvoje: valymas, atstatymas, naujas graviravimas, pakrypusių paminklų ištiesinimas, pamatų atstatymas. Asmeninis vadovas.",
+  openGraph: {
+    title: "Paminklų restauravimas — atnaujinamas atminimas | Amžinas Akmuo",
+    description:
+      "Restauruojame paminklus visoje Lietuvoje: valymas, atstatymas, naujas graviravimas, pakrypusių paminklų ištiesinimas, pamatų atstatymas. Asmeninis vadovas.",
+    url: "https://amzinasakmuo.lt/paslaugos/restauravimas",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 const restaurationItems = [

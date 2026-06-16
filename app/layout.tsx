@@ -18,12 +18,18 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amzinasakmuo.lt"),
   title: {
     default: "Amžinas Akmuo — modernaus dizaino antkapiai",
     template: "%s | Amžinas Akmuo",
   },
   description:
     "Gaminame modernaus dizaino antkapius tiesiai iš savo gamyklos — be perpardavėjų antkainio. Asmeninis vadovas, skaidri kaina, garantija.",
+  openGraph: {
+    siteName: "Amžinas Akmuo",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

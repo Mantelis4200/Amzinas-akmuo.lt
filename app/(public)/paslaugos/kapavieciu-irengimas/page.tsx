@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Kapaviečių įrengimas — pilni komplektai",
   description:
     "Įrengiame kapavietės pilnu ciklu: pamatų betonavimas, borteliai, tvorelės, trinkelių klojimas, akmenukų dekoras ir montavimas. Visa Lietuva iš Trakų.",
+  openGraph: {
+    title: "Kapaviečių įrengimas — pilni komplektai | Amžinas Akmuo",
+    description:
+      "Įrengiame kapavietės pilnu ciklu: pamatų betonavimas, borteliai, tvorelės, trinkelių klojimas, akmenukų dekoras ir montavimas. Visa Lietuva iš Trakų.",
+    url: "https://amzinasakmuo.lt/paslaugos/kapavieciu-irengimas",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 const darbaiItems = [

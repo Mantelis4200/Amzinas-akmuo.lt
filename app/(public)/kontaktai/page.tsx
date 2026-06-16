@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import { LeadForm } from "@/components/LeadForm";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Kontaktai — susisiekite su mumis",
   description:
     "Susisiekite su Amžinas Akmuo: telefonu +370 616 56686, el. paštu info@amzinasakmuo.lt. Dirbame visoje Lietuvoje, gamyba ir montavimas iš Trakų.",
+  openGraph: {
+    title: "Kontaktai — susisiekite su mumis | Amžinas Akmuo",
+    description:
+      "Susisiekite su Amžinas Akmuo: telefonu +370 616 56686, el. paštu info@amzinasakmuo.lt. Dirbame visoje Lietuvoje, gamyba ir montavimas iš Trakų.",
+    url: "https://amzinasakmuo.lt/kontaktai",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
@@ -35,6 +44,7 @@ export default async function KontaktaiPage({
 
   return (
     <>
+      <JsonLd />
       <style>{`
         .kontaktai-hero {
           padding: 78px 0 64px;

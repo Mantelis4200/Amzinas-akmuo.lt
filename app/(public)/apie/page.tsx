@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Apie mus — Amžinas Akmuo",
   description:
     "Sužinokite apie Amžinas Akmuo komandą: modernaus dizaino antkapiai, partnerystė su gamybos įmone Modernus Akmuo Trakuose, tiesioginis tiekimas be perpardavėjų.",
+  openGraph: {
+    title: "Apie mus — Amžinas Akmuo",
+    description:
+      "Sužinokite apie Amžinas Akmuo komandą: modernaus dizaino antkapiai, partnerystė su gamybos įmone Modernus Akmuo Trakuose, tiesioginis tiekimas be perpardavėjų.",
+    url: "https://amzinasakmuo.lt/apie",
+    locale: "lt_LT",
+    type: "website",
+  },
 };
 
 const priezastys = [
