@@ -50,7 +50,7 @@ VERCEL (Next.js app)
 | Maršrutas | Paskirtis |
 |---|---|
 | `/` | Hero, UVP, paslaugų santrauka, darbų preview, procesas (5 žingsniai), atsiliepimai, CTA forma |
-| `/paslaugos/antkapiai` | Nauji antkapiai — gamyba nuo 0, dizainai, paketai (Klasika / Modern / Premium) |
+| `/paslaugos/antkapiai` | Nauji antkapiai — gamyba nuo 0, dizainų galerija (nuotraukos), kainos skaičiuoklė |
 | `/paslaugos/restauravimas` | Senų paminklų atnaujinimas, „prieš / po", atskira CTA |
 | `/paslaugos/kapavieciu-irengimas` | Pamatai, borteliai, trinkelės, akmenukų dekoras, komplektai |
 | `/darbai` | Portfolio galerija (filtras: nauji / restauruoti) |
@@ -60,6 +60,16 @@ VERCEL (Next.js app)
 **Navigacija:** Pradinis · **Paslaugos ▾** (Antkapiai / Restauravimas / Kapaviečių įrengimas) · Darbai · Apie · Kontaktai · [telefonas] · [Gauti pasiūlymą]. Mobiliajame „Paslaugos" — accordion burger meniu viduje.
 
 **Bendri elementai:** sticky header (telefonas + CTA), footer (kontaktai, paslaugos, veikimo zona), užklausos forma pasiekiama iš visų puslapių.
+
+### 4.1 Paslaugų puslapių struktūra (patvirtinta vizualiai)
+
+**Sprendimas: paketų (Klasika/Modern/Premium) nedarom.** Šioje nišoje pirkėjai neperka emociškai greitai — nori pasižiūrėti ir būti išklausyti, ne rinktis „populiariausią" paketą.
+
+| Puslapis | Sekcijų tvarka |
+|---|---|
+| Antkapiai | Hero → Medžiagų gidas → Dizainų galerija (nuotraukos) → Kainos skaičiuoklė → Procesas → Atsiliepimai → CTA |
+| Restauravimas | Hero → „Prieš / po" galerija → Ką restauruojam → Procesas → Atsiliepimai → CTA |
+| Kapaviečių įrengimas | Hero → Darbai (kortelės: pamatai, borteliai, trinkelės, dekoras, montavimas) → Galerija → Procesas → CTA |
 
 ## 5. Duomenų modelis
 
@@ -82,6 +92,30 @@ Statusų eiga: `NAUJAS → SUSISIEKTA → PASIULYMAS → LAIMĖTA / PRARASTA`
 `notes` yra universalus laisvo teksto laukas — atskirų struktūruotų laukų miestui/biudžetui nereikia.
 
 **Auth:** NextAuth (credentials provider) su `User` lentele — hash'inti slaptažodžiai (bcrypt), 2 paskyros (savininkas + partneris).
+
+## 5.1 Kainos skaičiuoklė (antkapiai)
+
+Vietoj silueto „konfigūratoriaus" — **kainos skaičiuoklė pagal matmenis + akmenį** (siluetai prastai perteiktų realybę; dizainams naudosim tikras nuotraukas galerijoje).
+
+**Įvestys:** ilgis, plotis, storis (cm, slankikliai) + akmens tipas/spalva (pilkas / juodas / rudas granitas, marmuras).
+
+**Logika (visi koeficientai vienoje vietoje — `CFG` objektas):**
+```
+kaina = tūris(m³) × pricePerM3[akmuo]  +  apdirbimas(workMultiplier)  +  baseFee
+tūris = (ilgis/100) × (plotis/100) × (storis/100)
+```
+
+```js
+CFG = {
+  pricePerM3: { pilkas, juodas, rudas, marmuras },  // €/m³ — PLACEHOLDER
+  workMultiplier,                                    // apdirbimas+graviravimas — PLACEHOLDER
+  baseFee                                            // pjovimas/pamatas startas — PLACEHOLDER
+}
+```
+
+**Svarbu:** koeficientai laikini. Tikslią formulę įdės savininkas, gavęs skaičiavimo instrukcijas iš tiekėjo — keičiamas tik `CFG` blokas. Rezultatas — „nuo €X" orientyras + mygtukas „Užklausti tikslios kainos", kuris generuoja `Lead` su pasirinktais matmenimis ir akmeniu (įrašoma į `message`/`notes`).
+
+**Duomenys (akmenys) — kode** (ne DB+admin): paprasčiau, savininkas redaguoja per kodą; vėliau galima perkelti į DB.
 
 ## 6. Backend srautai
 
