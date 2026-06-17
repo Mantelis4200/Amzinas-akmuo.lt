@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,500;9..144,1,400&display=swap');</style>
+  <circle cx="100" cy="100" r="76" fill="#2B2520" stroke="rgba(43,37,32,0.16)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="64" fill="none" stroke="#B0764F" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="100" y="129" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="82" font-weight="500" fill="#F7F2EA">A<tspan fill="#B0764F">A</tspan></text>
+  <text x="215" y="92" style="font-family:'Fraunces',Georgia,serif" font-size="56" font-weight="500" fill="#2B2520">Amžinas</text>
+  <text x="215" y="150" style="font-family:'Fraunces',Georgia,serif" font-size="56" font-weight="400" font-style="italic" fill="#B0764F">Akmuo</text>
+</svg>
