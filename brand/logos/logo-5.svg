@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@500;600&display=swap');</style>
+  <rect width="240" height="240" rx="48" fill="#B0764F"/>
+  <path d="M 72 168 L 72 96 A 48 48 0 0 1 168 96 L 168 168 Z" fill="#F7F2EA"/>
+  <line x1="120" y1="92" x2="120" y2="158" stroke="#B0764F" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="120" cy="78" r="9" fill="#B0764F"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 420">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@500;600&display=swap');</style>
+  <path d="M 155 250 L 155 125 A 75 75 0 0 1 305 125 L 305 250 Z" fill="#2B2520"/>
+  <path d="M 155 250 L 155 125 A 75 75 0 0 1 305 125 L 305 250 Z" fill="none" stroke="#B0764F" stroke-width="0"/>
+  <line x1="230" y1="120" x2="230" y2="235" stroke="#B0764F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="230" cy="100" r="13" fill="#B0764F"/>
+  <text x="230" y="330" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="62" font-weight="500" fill="#2B2520">Amžinas Akmuo</text>
+  <text x="230" y="368" text-anchor="middle" style="font-family:'Hanken Grotesk',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="5.5" fill="#6E6357">MODERNŪS ANTKAPIAI</text>
+</svg>

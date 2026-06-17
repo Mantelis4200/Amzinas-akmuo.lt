@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@500;600&display=swap');</style>
+  <rect x="30" y="35" width="150" height="150" rx="20" fill="#2B2520"/>
+  <text x="105" y="138" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="86" font-weight="500" fill="#F7F2EA">A<tspan fill="#B0764F">A</tspan></text>
+  <text x="210" y="100" style="font-family:'Fraunces',Georgia,serif" font-size="62" font-weight="500" fill="#2B2520">Amžinas</text>
+  <text x="210" y="162" style="font-family:'Fraunces',Georgia,serif" font-size="62" font-weight="400" font-style="italic" fill="#B0764F">Akmuo</text>
+</svg>

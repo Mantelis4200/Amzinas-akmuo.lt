@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@500;600&display=swap');</style>
+  <text x="260" y="130" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="92" font-weight="500" fill="#2B2520">Amžinas</text>
+  <text x="260" y="218" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="92" font-weight="400" font-style="italic" fill="#B0764F">Akmuo</text>
+  <line x1="170" y1="252" x2="350" y2="252" stroke="#2B2520" stroke-opacity="0.25" stroke-width="2"/>
+  <text x="260" y="284" text-anchor="middle" style="font-family:'Hanken Grotesk',Arial,sans-serif" font-size="16" font-weight="600" letter-spacing="6" fill="#6E6357">MODERNAUS DIZAINO ANTKAPIAI</text>
+</svg>
