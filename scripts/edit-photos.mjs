@@ -14,8 +14,8 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RAW = join(ROOT, "photos", "raw");
-const OUT = join(ROOT, "photos", "edited");
-const MODEL = "gemini-2.5-flash-image"; // švarus/pigus editorius; alternatyva: "gemini-3.1-flash-image"
+const OUT = join(ROOT, "photos", process.env.OUT_DIR || "edited");
+const MODEL = process.env.GEMINI_MODEL || "gemini-3-pro-image"; // best quality; cheaper: GEMINI_MODEL=gemini-2.5-flash-image
 
 // --- load GEMINI_API_KEY from .env.local ---
 function loadKey() {
@@ -28,13 +28,16 @@ function loadKey() {
 const KEY = loadKey();
 
 const PROMPT = `You are a professional product-photo retoucher for a premium gravestone/monument brand.
-Edit this photo of a REAL granite monument with these rules:
+You are given a real photo of a granite gravestone / full grave plot (kapavietė) shot in an outdoor workshop yard. Retouch it into a clean premium catalogue image. Rules:
 
-1. KEEP THE MONUMENT EXACTLY AS-IS — its exact shape, stone colour and texture, polish, and any carved relief/cross/ornament must stay unchanged and clearly recognizable. Do not redesign, distort, or invent the monument.
-2. Replace the messy outdoor yard/workshop background with a clean, soft, NEUTRAL STUDIO backdrop in warm stone tones (cream / greige), a gentle vertical gradient, and a subtle soft shadow grounding the monument. Premium catalogue look.
-3. Improve lighting: even, soft, natural light; correct exposure and white balance; tasteful warm colour grade that feels calm and respectful.
-4. PRIVACY: subtly blur/soften any engraved NAMES, DATES and any PORTRAIT photos of the deceased so they are not legible — while keeping the lettering style and overall design visible. Do NOT add fake names or text.
-5. Output a single high-quality, photorealistic image. No text overlays, no watermarks, no borders.`;
+1. ORIENTATION: if the photo is rotated or sideways, rotate/correct it so the monument and headstone stand UPRIGHT and vertical, photographed at natural eye level from the front.
+2. HERO FRAMING: make the monument the clear hero subject — large, centered, filling most of the frame. Do NOT shrink it, tilt it, or place it small in the distance. Straighten perspective to a clean frontal product view.
+3. KEEP THE MONUMENT EXACTLY AS-IS — its exact shape, proportions, stone colour and texture, polish, and any carved relief/cross/ornament must stay unchanged and clearly recognizable. Do not redesign, distort, recolour, or invent the monument.
+4. BACKGROUND: replace the messy yard/fence/rebar background with a clean, soft, NEUTRAL STUDIO backdrop in warm stone tones (cream / greige), a gentle vertical gradient, and a subtle soft contact shadow grounding the monument. Premium catalogue look.
+5. LIGHTING: even, soft, natural light; correct exposure and white balance; tasteful warm colour grade that feels calm and respectful.
+6. CLEANUP: remove any workshop inventory/price tags, stickers, chalk marks, numbers or labels placed on the stone or plot.
+7. PRIVACY: subtly blur/soften any engraved NAMES, DATES and any PORTRAIT photos of the deceased so they are not legible — while keeping the lettering style and overall design visible. Do NOT add fake names or text.
+8. Output a single high-quality, photorealistic image, portrait or square framing as fits the monument. No text overlays, no watermarks, no borders.`;
 
 const exts = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic"]);
 const mimeOf = (e) => ({ ".jpg":"image/jpeg",".jpeg":"image/jpeg",".png":"image/png",".webp":"image/webp",".heic":"image/heic" }[e.toLowerCase()] || "image/jpeg");
