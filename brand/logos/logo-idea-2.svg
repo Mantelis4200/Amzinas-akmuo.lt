@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Hanken+Grotesk:wght@600&display=swap');</style>
+  <rect x="40" y="40" width="680" height="170" rx="20" fill="#EDE4D5" stroke="#2B2520" stroke-opacity="0.12"/>
+  <text x="380" y="130" text-anchor="middle" style="font-family:'Fraunces',Georgia,serif" font-size="70" font-weight="500" fill="#2B2520">Amžinas Akmuo</text>
+  <path d="M250 162 l10 6 l250 0 l10 -6" fill="none" stroke="#B0764F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="380" y="252" text-anchor="middle" style="font-family:'Hanken Grotesk',Arial,sans-serif" font-size="16" font-weight="600" letter-spacing="6.5" fill="#6E6357">GRAVIRAVIMAS · ANTKAPIAI</text>
+</svg>

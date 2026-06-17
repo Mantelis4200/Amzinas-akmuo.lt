@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Hanken+Grotesk:wght@600&display=swap');</style>
+  <g>
+    <polygon points="110,150 110,70 175,120" fill="#EDE4D5"/>
+    <polygon points="110,150 175,120 160,205" fill="#B0764F"/>
+    <polygon points="110,150 160,205 110,235" fill="#2B2520"/>
+    <polygon points="110,150 110,235 60,205" fill="#3A322A"/>
+    <polygon points="110,150 60,205 45,120" fill="#6E6357"/>
+    <polygon points="110,150 45,120 110,70" fill="#E0D5C3"/>
+    <polygon points="110,70 175,120 160,205 110,235 60,205 45,120" fill="none" stroke="#2B2520" stroke-opacity="0.25" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <text x="215" y="138" style="font-family:'Fraunces',Georgia,serif" font-size="56" font-weight="500" fill="#2B2520">Amžinas</text>
+  <text x="215" y="196" style="font-family:'Fraunces',Georgia,serif" font-size="56" font-weight="400" font-style="italic" fill="#B0764F">Akmuo</text>
+</svg>
