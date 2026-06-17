@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "./ui/Button";
+import { Logo } from "./Logo";
 
 const NAV_LINKS = [
   { label: "Pradinis", href: "/" },
@@ -67,19 +68,7 @@ export function Header() {
           }}
         >
           {/* Logo */}
-          <Link
-            href="/"
-            style={{
-              fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 600,
-              fontSize: "22px",
-              letterSpacing: "0.01em",
-              color: "var(--espresso)",
-              textDecoration: "none",
-            }}
-          >
-            Amžinas<span style={{ color: "var(--clay)" }}>·</span>Akmuo
-          </Link>
+          <Logo href="/" height={44} />
 
           {/* Desktop nav */}
           <ul

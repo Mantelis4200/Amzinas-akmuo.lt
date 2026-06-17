@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 const SERVICE_LINKS = [
   { label: "Antkapiai", href: "/paslaugos/antkapiai" },
@@ -51,17 +52,8 @@ export function Footer() {
         <div className="foot-grid">
           {/* Col 1: Brand */}
           <div>
-            <div
-              style={{
-                fontFamily: "var(--font-serif), Georgia, serif",
-                fontWeight: 600,
-                fontSize: "22px",
-                letterSpacing: "0.01em",
-                marginBottom: "12px",
-                color: "var(--espresso)",
-              }}
-            >
-              Amžinas<span style={{ color: "var(--clay)" }}>·</span>Akmuo
+            <div style={{ marginBottom: "14px" }}>
+              <Logo height={48} />
             </div>
             <p
               style={{
